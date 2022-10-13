@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Extractor</title>
+    <link rel="stylesheet" href="Asserts/style.css">
+
+</head>
+<body>
+    <div class="align">
+        <h1 style="font-family: 'Courier New', Courier, monospace; color: white;">Email Extractor</h1>
+        <textarea name="paragraph" cols="80" rows="8" placeholder="Type your text here......" id="sample"></textarea>
+        <br>
+        <button onclick="getValue();" id="button">Get Email</button>
+
+        <p id="printArea"></p>
+
+        <script type='text/javascript'>
+            function getValue() {
+                var text = document.getElementById('sample').value;
+                var mailFormat = text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi);
+                document.getElementById('printArea').innerHTML = mailFormat;
+            }
+        </script>
+    </div>
+    
+
+    
+</body>
+</html>
