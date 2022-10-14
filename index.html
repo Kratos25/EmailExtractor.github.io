@@ -13,10 +13,9 @@
         <h1 style="font-family: 'Courier New', Courier, monospace; color: white;">Email Extractor</h1>
         <textarea name="paragraph" cols="80" rows="8" placeholder="Type your text here......" id="sample"></textarea>
         <br>
-        <button onclick="getValue();" id="button">Get Email</button>
-
-        <p id="printArea"></p>
-
+        <button onclick="getValue();" id="button">Extract</button>
+        <div id="ExtEmailDiv"><p id="printArea"></p></div>
+        
         <script type='text/javascript'>
             function getValue() {
                 var text = document.getElementById('sample').value;
